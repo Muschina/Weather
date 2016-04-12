@@ -1,0 +1,23 @@
+<div class="container">
+	
+	<div class="row" ng-controller="weatherCtrl as weather">
+	<h2>Weather in the {{weather.city}}</h2>
+		<ul>
+			<li ng-repeat="itemWeather in weather.listOfWeatherResults">
+				<div>{{itemWeather.date}}</div>
+      	<img ng-src="{{itemWeather.img}}" alt="{{itemWeather.alt}}">
+      	<span>Cmin - {{itemWeather.minTemperature}}</span>
+      	<span>Cmax - {{itemWeather.maxTemperature}}</span>
+			</li>
+			
+		</ul>
+      
+    
+  </div>
+
+  
+	<div class="footer">
+		<p>Weather footer</a></p>
+	</div>
+
+</div>
