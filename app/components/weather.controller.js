@@ -8,7 +8,6 @@
 
 		function weatherCtrl( WeatherPrepService, CityIPPrepService) {
 			var vm = this;
-			vm.city = "";
 			vm.listOfWeatherResults = [];
 
 			vm.city = CityIPPrepService;
