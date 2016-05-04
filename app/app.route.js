@@ -4,28 +4,26 @@
     .module('weatherApp')
     .config(config);
 
+    config.$inject = ['$routeProvider'];
+
     function config($routeProvider) {
       $routeProvider
         .when('/weather', {
-          templateUrl: 'app/components/weather.html',
+          templateUrl: 'app/weather/weather.html',
           controller: 'weatherCtrl',
           controllerAs: 'weather',
           resolve: {
             CityIPPrepService: function(CityIPService) {
-              console.log(CityIPService.get());
-              return CityIPService.get().$promise.then(function (response) {
-                    return response.city.name_en;                       
-                }, function (reason) {
-                    console.log(reason.message);
-                });   
+              console.log(CityIPService);
+              return CityIPService.success(function (response) {
+                    return response;                       
+                });
             },
-            WeatherPrepService: function(WeatherService) {
-              console.log(WeatherService.get());
-              return WeatherService.get().$promise.then(function (response) {
-                    return response.data.weather;                       
-                }, function (reason) {
-                    console.log(reason.message);
-                }); 
+            CityListPrepService: function(CityListService) {
+              console.log(CityListService);
+              return CityListService.success(function (response) {
+                    return response;                       
+                });
             }
           }
         })
