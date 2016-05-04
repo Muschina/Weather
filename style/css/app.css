@@ -15,6 +15,11 @@ body {
     color: #C0BFBF;
 }
 
+.image-size {
+    display: block;
+    width: 100%;
+}
+
 .post-thumb {
     float: left;
     margin: 3px 15px 10px 0px;
@@ -22,7 +27,42 @@ body {
 
 .post-container {
 	overflow: hidden;
-	min-height: 283px;
+    list-style: none;	    
+}
+
+.error {
+    padding-left: 12px;
+    color: red;
+}
+
+.container-height {
+    height: 100px;
+}
+
+.title {
+    text-align: center;    
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+/* SEARCH BUTTON*/
+.right-inner-addon {
+    position: relative;
+}
+.right-inner-addon input {
+    padding-right: 30px;
+    /*border: none;*/
+}
+.right-inner-addon span {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
 }
 
 .GithubLink a{
